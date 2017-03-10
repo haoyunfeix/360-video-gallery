@@ -17,7 +17,7 @@
     <a-scene>
       <a-assets>
 	  
-        <video id="video" src="videos/red.mp4" autoplay loop crossorigin="anonymous" controls></video>
+        <video id="video" src="videos/high.mp4" autoplay loop crossorigin="anonymous" controls></video>
 
         <img id="boys-thumb" crossorigin="anonymous" src="imgs/boys.jpg">
         <img id="dancer-thumb" crossorigin="anonymous" src="imgs/dancer.jpg">
@@ -31,6 +31,8 @@
 		<img id="nights-thumb" crossorigin="anonymous" src="imgs/nights.jpg">
 		<img id="pokemon-thumb" crossorigin="anonymous" src="imgs/pokemon.jpg">
 		<img id="assassin-thumb" crossorigin="anonymous" src="imgs/assassin.jpg">
+		<img id="low-thumb" crossorigin="anonymous" src="imgs/low.jpg">
+		<img id="high-thumb" crossorigin="anonymous" src="imgs/high.jpg">
 		
         <!-- Image link template to be reused. -->
         <script id="link" type="text/html">
@@ -48,7 +50,11 @@
       <a-videosphere id="video-360" src="#video" rotation="0 180 0"></a-videosphere>
       <a-entity video-controls="src:#video"></a-entity>
 
-      <a-entity id="links" layout="type: line; margin: 2.4" position="-3.5 1 -5">
+	  <a-entity id="links" layout="type: line; margin: 2.4" position="-1.5 0.2 -5">
+        <a-entity template="src: #link" data-src="videos/low.mp4" data-thumb="#low-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="videos/high.mp4" data-thumb="#high-thumb"></a-entity>
+	  </a-entity>
+     <!-- <a-entity id="links" layout="type: line; margin: 2.4" position="-3.5 1 -5">
         <a-entity template="src: #link" data-src="videos/boys.mp4" data-thumb="#boys-thumb"></a-entity>
         <a-entity template="src: #link" data-src="videos/dancer.mp4" data-thumb="#dancer-thumb"></a-entity>
         <a-entity template="src: #link" data-src="videos/f1.mp4" data-thumb="#f1-thumb"></a-entity>
@@ -66,6 +72,7 @@
 		<a-entity template="src: #link" data-src="videos/tiger.mp4" data-thumb="#tiger-thumb"></a-entity>
 		<a-entity template="src: #link" data-src="videos/assassin.mp4" data-thumb="#assassin-thumb"></a-entity>
       </a-entity>
+	  -->
 
       <!-- Camera + cursor. -->
       <a-entity camera look-controls>
